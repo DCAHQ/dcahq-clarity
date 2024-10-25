@@ -1,0 +1,46 @@
+---
+id: 0
+name: Mainnet deployment
+network: mainnet
+stacks-node: "https://api.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoin.blockstack.com:8332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        # - contract-publish:
+        #     contract-name: auth-v3-0
+        #     expected-sender: SPNG8GDC6VW6SPAGE5M9ZCASPJWK65NDTH2E84HX
+        #     cost: 5628123
+        #     path: ontracts/dist/auth.clar
+        #     anchor-block-only: true
+        #     clarity-version: 2
+        # - contract-publish:
+        #     contract-name: dca-vault-v3-0
+        #     expected-sender: SPNG8GDC6VW6SPAGE5M9ZCASPJWK65NDTH2E84HX
+        #     cost: 4865103
+        #     path: ontracts/dist/dca-vault.clar
+        #     anchor-block-only: true
+        #     clarity-version: 2
+        # - contract-publish:
+        #     contract-name: strategy-v3-0
+        #     expected-sender: SPNG8GDC6VW6SPAGE5M9ZCASPJWK65NDTH2E84HX
+        #     cost: 4865510
+        #     path: ontracts/dist/strategy.clar
+        #     anchor-block-only: true
+        #     clarity-version: 2
+        - contract-publish:
+            contract-name: dca-manager-v3-0
+            expected-sender: SPNG8GDC6VW6SPAGE5M9ZCASPJWK65NDTH2E84HX
+            cost: 2099256
+            path: contracts/dist/dca-manager.clar
+            anchor-block-only: true
+            clarity-version: 2
+        # - contract-publish:
+        #     contract-name: default-strategy-v3-0
+        #     expected-sender: SPNG8GDC6VW6SPAGE5M9ZCASPJWK65NDTH2E84HX
+        #     cost: 4866730
+        #     path: ontracts/dist/default-strategy.clar
+        #     anchor-block-only: true
+        #     clarity-version: 2
+      epoch: "2.4"

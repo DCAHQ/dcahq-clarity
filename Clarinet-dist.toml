@@ -1,0 +1,69 @@
+[project]
+name = 'memepool'
+description = ''
+authors = []
+telemetry = true
+cache_dir = './.cache'
+
+[[project.requirements]]
+contract_id = 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.amm-pool-v2-01'
+
+[[project.requirements]]
+contract_id = 'SP102V8P0F7JX67ARQ77WEA3D3CFB5XW39REDT0AM.trait-sip-010'
+
+[[project.requirements]]
+contract_id = 'SP1Y5YSTAHZ88XYK1VPDH24GY0HPX5J4JECTMY4A1.univ2-share-fee-to-trait'
+
+[[project.requirements]]
+contract_id = 'SP1Y5YSTAHZ88XYK1VPDH24GY0HPX5J4JECTMY4A1.univ2-router'
+
+[[project.requirements]]
+contract_id = 'SP1Y5YSTAHZ88XYK1VPDH24GY0HPX5J4JECTMY4A1.univ2-share-fee-to'
+
+[[project.requirements]]
+contract_id = 'SP2AKWJYC7BNY18W1XXKPGP0YVEK63QJG4793Z2D4.sip-010-trait-ft-standard'
+
+[[project.requirements]]
+contract_id = 'SP1Y5YSTAHZ88XYK1VPDH24GY0HPX5J4JECTMY4A1.univ2-core'
+
+[[project.requirements]]
+contract_id = 'SP1Y5YSTAHZ88XYK1VPDH24GY0HPX5J4JECTMY4A1.univ2-library'
+
+# DIST ########################################################################################
+[contracts.auth-v3-0]
+path = 'contracts/dist/auth.clar'
+clarity_version = 2
+epoch = 2.4
+
+[contracts.dca-manager-v3-0]
+path = 'contracts/dist/dca-manager.clar'
+clarity_version = 2
+epoch = 2.4
+
+[contracts.dca-vault-v3-0]
+path = 'contracts/dist/dca-vault.clar'
+clarity_version = 2
+epoch = 2.4
+
+[contracts.default-strategy-v3-0]
+path = 'contracts/dist/default-strategy.clar'
+clarity_version = 2
+epoch = 2.4
+
+[contracts.strategy-v3-0]
+path = 'contracts/dist/strategy.clar'
+clarity_version = 2
+epoch = 2.4
+
+[repl]
+clarity_wasm_mode = false
+show_timings = false
+
+[repl.analysis]
+passes = ['check_checker']
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
